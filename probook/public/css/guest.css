@@ -50,7 +50,7 @@ input:-webkit-autofill:active {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    background: rgba(59, 105, 145, 0.8);
+    background: rgba(141, 60, 70, 0.8);
 }
 
 .tab_container label{
@@ -75,7 +75,7 @@ input:-webkit-autofill:active {
 
 
 .tab_container [id^="tab"]:checked + .head, .tab_container .head:hover {
-    background: rgba(11, 75, 134, 0.8);
+    background: rgba(228, 78, 114, 0.8);
 }
 
 
@@ -332,22 +332,12 @@ input:-webkit-autofill:active {
     background-color: #5cb85c; }
 
 .btn-login{
-    background: #409aff;
+    background: #ee2e43;
     border: none;
     display: block;
     width: 100%;
     padding: 15px 0;
     font-size: 19px;
-}
-
-.btn-facebook{
-    background: #5b77b2;
-    border: none;
-    display: block;
-    width: 100%;
-    padding: 15px 0;
-    font-size: 15px;
-    margin-top: 20px;
 }
 
 .btn-facebook i{
@@ -361,7 +351,7 @@ input:-webkit-autofill:active {
 
 
 .btn-register{
-    background: #43b951;
+    background: #fb813e;
     border: none;
     display: block;
     width: 100%;
@@ -370,7 +360,7 @@ input:-webkit-autofill:active {
 }
 
 .btn-register:hover {
-    background: #2f8239;
+    background: #ca6534;
 }
 
 .sub-title{

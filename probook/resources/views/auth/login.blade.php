@@ -56,30 +56,9 @@
                     Log In
                 </button>
 
-                <div class="clearfix"></div>
-
-                <a class="btn btn-link btn-forgot hidden" href="{{ route('password.request') }}">
-                    Forgot Your Password?
-                </a>
-            </div>
-        </div>
 
 
-        <div class="clearfix"></div>
 
-        <div class="sub-title">
-            <hr />
-            <span>or</span>
-        </div>
-
-
-        <div class="form-group">
-            <div class="col-md-8 col-md-offset-2">
-                <button type="submit" class="btn btn-primary btn-facebook">
-                    <i class="fa fa-facebook-square"></i> Connect with Facebook
-                </button>
-            </div>
-        </div>
 
 
 

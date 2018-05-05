@@ -199,46 +199,6 @@ class ProfileController extends Controller
 
         return Response::json($response);
     }
-
-    public function saveHobbies(Request $request, $username){
-
-        if (!$this->secure($username)) return redirect('/404');
-
-
-        $my_hobbies = Auth::user()->hobbies()->get();
-
-
-        $list = [];
-
-        foreach($request->input('hobbies') as $i => $id){
-            $list[$id] = 1;
-        }
-
-
-
-        foreach($my_hobbies as $hobby){
-            $hobby_id = $hobby->hobby_id;
-            if (!array_key_exists($hobby_id, $list)){
-                $deleted = DB::delete('delete from user_hobbies where user_id='.Auth::id().' and hobby_id='.$hobby_id);
-            }
-            unset($list[$hobby_id]);
-        }
-
-
-
-        foreach($list as $id => $status){
-            $hobby = new UserHobby();
-            $hobby->user_id = Auth::id();
-            $hobby->hobby_id = $id;
-            $hobby->save();
-        }
-
-        $request->session()->flash('alert-success', 'Your hobbies have been successfully updated!');
-
-        return redirect('/'.Auth::user()->username);
-
-    }
-
     public function saveRelationship(Request $request, $username){
 
         if (!$this->secure($username)) return redirect('/404');

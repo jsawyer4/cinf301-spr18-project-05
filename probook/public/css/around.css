@@ -29,7 +29,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* Header */
 .navbar-around {
-    background: #1be7dc;
+    background: url('../images/guest.jpg');
     min-height: 61px;
     margin-bottom: 0;
     border-bottom: 0;
@@ -261,7 +261,7 @@ a, a:hover, a:active, a:visited, a:focus {
     color: #fff;
     float: left;
     text-shadow: 1px 1px #000;
-    background: rgba(0,0,0,0.4);
+    background: rgba(234, 35, 42, 0.4);
     padding: 10px 20px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -450,27 +450,27 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .count_widget a.purple {
-    background: #b074cc;
+    background: #d44192;
 }
 
 .count_widget a.purple:hover {
-    background: #b345cc;
+    background: #b7397d;
 }
 
 .count_widget a.green {
-    background: #45bab6;
+    background: #d895b8;
 }
 
 .count_widget a.green:hover {
-    background: #45cac6;
+    background: #af7a91;
 }
 
 .count_widget a.blue {
-    background: #457cba;
+    background: #ccbc6e;
 }
 
 .count_widget a.blue:hover {
-    background: #2a5c95;
+    background: #8a7d45;
 }
 
 
@@ -570,15 +570,15 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .new-post-box .btn-submit {
-    background: #488ec9;
-    border-color: #3c76a7;
+    background: #d953ac;
+    border-color: #d24766;
     padding-left: 20px;
     padding-right: 20px;
     color: #fff
 }
 
 .new-post-box .btn-submit:hover {
-    background: #3c76a7;
+    background: #ea232a;
     border-color: #2e5679;
 }
 
@@ -911,7 +911,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .user-card .cover {
     width: 100%;
     height: 100px;
-    background-color: #334d63;
+    background-color: #ea232a;
     background-size: cover;
     background-position: center center;
 }

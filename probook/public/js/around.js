@@ -25,22 +25,8 @@ function makeSerializable(elem) {
 }
 
 
-var location_finder = "not-running";
-var found_location = "";
-function getLocation() {
-    if (navigator.geolocation) {
-        return navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else {
-        $('#errorMessageModal').modal('show');
-        $('#errorMessageModal #errors').html("Geolocation is not supported by this browser.");
-    }
-}
 
-function showPosition(position) {
-    var location = {latitude: position.coords.latitude, longitude: position.coords.longitude};
-    location_finder = "found";
-    found_location = location;
-}
+
 
 function showError(error) {
     var error_msg = null;
@@ -62,75 +48,6 @@ function showError(error) {
     $('#errorMessageModal #errors').html(error_msg);
     location_finder = "not-found";
 }
-
-
-var found_location2 = "";
-var location_finder2 = "not-running";
-function getLocation2() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition2);
-    } else {
-        location_finder2 = "not-found";
-    }
-}
-function showPosition2(position) {
-    found_location2 = {latitude: position.coords.latitude, longitude: position.coords.longitude};
-    location_finder2 = "found";
-}
-
-function autoFindLocation(){
-
-    location_finder2 = "running";
-
-    getLocation2();
-
-
-    var updated = false;
-    var timer = setInterval(function(){
-        if (location_finder2 == 'found'){
-
-            $.ajax({
-                url: BASE_URL+'/save-my-location',
-                type: "GET",
-                timeout: 5000,
-                data: "latitude="+found_location2.latitude+"&longitude="+found_location2.longitude,
-                contentType: false,
-                cache: false,
-                processData: false,
-                headers: {'X-CSRF-TOKEN': CSRF},
-                success: function(response){
-
-                },
-                error: function(){
-                }
-            });
-
-            clearInterval(timer);
-        }else{
-            if (updated == false) {
-                $.ajax({
-                    url: BASE_URL + '/save-my-location2',
-                    type: "GET",
-                    timeout: 5000,
-                    data: "",
-                    contentType: false,
-                    cache: false,
-                    processData: false,
-                    headers: {'X-CSRF-TOKEN': CSRF},
-                    success: function (response) {
-
-                    },
-                    error: function () {
-                    }
-                });
-            }
-            updated = true;
-        }
-
-    }, 1);
-}
-
-
 function follow(following, follower, element, size){
 
     var data = new FormData();

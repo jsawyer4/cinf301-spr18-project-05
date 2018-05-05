@@ -27,9 +27,10 @@
                         @include('profile.widgets.information')
                     </div>
                     <div class="col-xs-12 col-md-3 pull-right">
-                        @include('profile.widgets.user_follow_counts')
+
                         <div class="hidden-sm hidden-xs">
                             @include('widgets.suggested_people')
+                            @include('profile.widgets.user_follow_counts')
                         </div>
                     </div>
                     <div class="col-md-6">

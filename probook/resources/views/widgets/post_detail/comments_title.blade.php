@@ -3,7 +3,7 @@
         @if($post->getCommentCount() > 0)
             @if($post->getCommentCount() > 1){{ $post->getCommentCount().' comments' }}@else{{ $post->getCommentCount().' comment' }}@endif
         @else
-            No Comments! Write a comment
+            well it looks like people are procrastinating commiting on your post procrastinate a bit and see if they finished procrastinating.
         @endif
     </small>
 </p>

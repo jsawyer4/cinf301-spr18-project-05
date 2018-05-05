@@ -38,10 +38,6 @@ Route::get('/post/{id}', 'PostsController@single');
 
 Route::get('/search', 'HomeController@search');
 
-Route::get('/groups', 'GroupController@index');
-Route::get('/group/{id}', 'GroupController@group');
-Route::get('/group/{id}/stats', 'GroupController@stats');
-
 Route::post('/follow', 'FollowController@follow');
 Route::get('/followers/pending', 'FollowController@pending');
 Route::post('/follower/request', 'FollowController@followerRequest');
@@ -53,6 +49,3 @@ Route::post('/{username}/upload/cover', 'ProfileController@uploadCover');
 Route::post('/{username}/save/information', 'ProfileController@saveInformation');
 Route::get('/{username}/following', 'ProfileController@following');
 Route::get('/{username}/followers', 'ProfileController@followers');
-Route::post('/{username}/save/hobbies', 'ProfileController@saveHobbies');
-Route::post('/{username}/save/relationship', 'ProfileController@saveRelationship');
-
